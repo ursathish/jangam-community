@@ -6,12 +6,40 @@ const getArticles = async (data) => {
     const reqParams = {
       ...data,
     };
-    const response = await http.get('data/articles.json');
+    const response = await http.get('articles/articles.json');
     return { status: response.status, data: response.data };
   } catch (err) {
     return Promise.reject(err);
   }
 };
+
+
+const getEvents = async (data) => {
+  try {
+    const reqParams = {
+      ...data,
+    };
+    const response = await http.get('events/event.json');
+    return { status: response.status, data: response.data };
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
+
+
+
+const getHistories = async (data) => {
+  try {
+    const reqParams = {
+      ...data,
+    };
+    const response = await http.get('history/history.json');
+    return { status: response.status, data: response.data };
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
+
 
 const getArticlesSubCategoryAll = async (data) => {
   try {
@@ -42,7 +70,31 @@ const getArticle = async (data) => {
     const reqParams = {
       ...data,
     };
-    const response = await http.post(config.ARTICLE_GET, reqParams);
+    const response = await http.get('articles.json', reqParams);
+    return { status: response.status, data: response.data };
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
+
+const getEvent = async (data) => {
+  try {
+    const reqParams = {
+      ...data,
+    };
+    const response = await http.get('event.json', reqParams);
+    return { status: response.status, data: response.data };
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
+
+const getHistory = async (data) => {
+  try {
+    const reqParams = {
+      ...data,
+    };
+    const response = await http.get('history.json', reqParams);
     return { status: response.status, data: response.data };
   } catch (err) {
     return Promise.reject(err);
@@ -53,7 +105,11 @@ const ArticleService = {
   getArticles,
   getArticle,
   getArticlesSubCategoryAll,
-  getArticlesCategoryAll
+  getArticlesCategoryAll,
+  getHistories,
+  getEvents,
+  getHistory,
+  getEvent
 };
 
 export default ArticleService;

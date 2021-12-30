@@ -7,7 +7,7 @@ import config from "../../environment";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-export default function Article() {
+export default function Event() {
   const [article, setArticle] = useState({});
   const router = useRouter();
   // const metaData = {
@@ -23,10 +23,10 @@ export default function Article() {
 
   const getArticles = useCallback(async () => {
     try {
-      const response = await ArticleService.getArticle();
+      const response = await ArticleService.getEvent();
       if (response.status === 200) {
         setArticle(
-          response.data["Articles"].filter(
+          response.data["Events"].filter(
             (ele) => ele.urlTitle == router.query["urlTitle"]
           )[0]
         );

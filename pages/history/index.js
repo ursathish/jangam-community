@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import ArticleCard from "../../components/article-card";
 import ArticleFeatureDetails from "../../components/featured-articles";
+import HistoryCard from "../../components/history-card";
 import ArticleService from "../api/services/article.service";
 
-export default function Articles() {
+export default function History() {
   const [articlesList, setArticleList] = useState([]);
   const [categoryList, setCategoryList] = useState([]);
   const [categoryByArticles, setCategoryByArticles] = useState({});
@@ -14,12 +15,12 @@ export default function Articles() {
 
   const getArticles = useCallback(async () => {
     try {
-      const response = await ArticleService.getArticles({ page: 0, size: 100 });
+      const response = await ArticleService.getHistories({ page: 0, size: 100 });
       if (response.status === 200) {
         // response.data["articles"].forEach((element, index) => {
         //   element.category = element.articleSubCategory.subCategoryName;
         // });
-        setArticleList(response.data["Articles"]);
+        setArticleList(response.data["History"]);
 
         // var categoryDetails = response.data["articles"].reduce(function (
         //   rv,
@@ -41,7 +42,7 @@ export default function Articles() {
 
   return (
     <div className="article-container">
-      <div className="title-text">Articles</div>
+      <div className="title-text">History</div>
 
       {/* <div className="featured-common-style bgColor ">
         <ArticleFeatureDetails />
@@ -52,7 +53,7 @@ export default function Articles() {
           {articlesList?.length > 0 && (
             <div className="row">
               {articlesList?.map((article, index) => (
-                <ArticleCard article={article} key={index} />
+                <HistoryCard article={article} key={index} />
               ))}
             </div>
           )}

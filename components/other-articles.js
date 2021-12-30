@@ -13,16 +13,16 @@ export default function OtherArticles({ currentArticle = {} }) {
 
   const getArticles = useCallback(async () => {
     try {
-      const response = await ArticleService.getArticles({
+      const response = await ArticleService.getArticle({
         page: 0,
         size: 100,
         tags: currentArticle["tags"],
       });
       if (response.status === 200) {
-        const filteredData = response.data["articles"].filter(
-          (ele) => ele.articleId !== currentArticle?.articleId
+        const filteredData = response.data["Articles"].filter(
+          (ele) => ele.urlTitle !== currentArticle?.urlTitle
         );
-        // console.log(filteredData)
+        console.log(filteredData)
         setDataSource(filteredData);
       }
     } catch (err) {

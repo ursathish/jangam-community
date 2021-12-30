@@ -111,7 +111,7 @@ export default function NavBar() {
                   router.asPath.includes("articles") ? "menu-active" : ""
                 }
                 onClick={() => {
-                  router.push("/stories");
+                  router.push("/articles");
                 }}
               >
                 கட்டுரைகள்
@@ -205,76 +205,6 @@ export default function NavBar() {
           </ul>
         </div>
       </div>
-
-      {(router.asPath.includes("media") ||
-        router.asPath.includes("stories") ||
-        router.asPath.includes("articles")) && (
-        <div className="d-none d-sm-none d-md-none d-lg-block">
-          <div className="top-banner-sub-section">
-            <h6 onClick={() => router.push("/stories")}>STORIES</h6>
-            <div>
-              <ul>
-                {storiesMenuList.slice(0, 3).map((option, index) => (
-                  <li key={index}>
-                    <a onClick={() => handleStoriesMenuClick(option)}>
-                      {option.menuName}
-                    </a>{" "}
-                  </li>
-                ))}
-
-                {storiesMenuList.slice(3, storiesMenuList.length).length >
-                  0 && (
-                  <li id="others-id">
-                    <a>
-                      Others <AiOutlineDown />
-                    </a>
-                    <div className="dropdown-content">
-                      {storiesMenuList
-                        .slice(3, storiesMenuList.length)
-                        .map((option, index) => (
-                          <span
-                            key={index}
-                            onClick={() => handleStoriesMenuClick(option)}
-                          >
-                            {option.menuName}
-                          </span>
-                        ))}
-                    </div>
-                  </li>
-                )}
-              </ul>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      )}
-
-      {(router.asPath.includes("vendors") ||
-        router.asPath.includes("brands")) && (
-        <div className="d-none d-sm-none d-md-none d-lg-block">
-          <div className="top-banner-sub-section">
-            <h6 onClick={() => router.push("/vendors")}>Vendors</h6>
-            <div>
-              <ul>
-                <li>
-                  <a>{"Brands"}</a>
-                </li>
-                <li>
-                  <a>{"Suppliers"}</a>
-                </li>
-                {/* {storiesMenuList.slice(0, 3).map((option, index) => (
-                  <li key={index}>
-                    <a onClick={() => handleStoriesMenuClick(option)}>
-                      {option.menuName}
-                    </a>{" "}
-                  </li>
-                ))} */}
-              </ul>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      )}
 
       <Drawer
         title={
