@@ -286,6 +286,11 @@ code {
     height: 50px;
   }
 
+  .register-form{
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .top-banner-static {
     height: 16px;
   }
@@ -376,6 +381,11 @@ code {
     /* display: flex; */
     padding-top: 100px;
     min-height: calc(100vh - 100px);
+  }
+
+  .register-form{
+    width: 480px;
+    margin: 0 auto;
   }
 
   .top-banner {
