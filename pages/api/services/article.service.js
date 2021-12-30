@@ -6,7 +6,7 @@ const getArticles = async (data) => {
     const reqParams = {
       ...data,
     };
-    const response = await http.post(config.ARTICLE_GET_ALL, reqParams);
+    const response = await http.get('data/articles.json');
     return { status: response.status, data: response.data };
   } catch (err) {
     return Promise.reject(err);

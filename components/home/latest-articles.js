@@ -3,52 +3,11 @@ import ArticleCard from "../article-card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useRouter } from "next/router";
+
 import axios from "axios";
 import ArticleService from "../../pages/api/services/article.service";
 
-const response = {
-  data: [
-    {
-      title: "Home Interior Trends of 2021",
-      shortDesc:
-        " If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      id: "Home-Interior-Trends-2021",
-      longDesc:
-        "Turning your home upside down to hunker down and outlast the pandemic. Or at least, make it a place where you can live in and operate out of for extended periods (more Zoom, anyone?). If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      published: true,
-      tags: ["Sixides Insider"],
-      category: "Sixides Insider",
-      publishedDate: 1639929600000,
-      cover: "public/images/8106596390133-Article16-Thumbnail.jpg",
-    },
-    {
-      title: "Home Interior Trends of 2021",
-      shortDesc:
-        " If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      id: "Home-Interior-Trends-2021",
-      longDesc:
-        "Turning your home upside down to hunker down and outlast the pandemic. Or at least, make it a place where you can live in and operate out of for extended periods (more Zoom, anyone?). If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      published: true,
-      tags: ["Sixides Insider"],
-      category: "Sixides Insider",
-      publishedDate: 1639929600000,
-      cover: "public/images/8106596390133-Article16-Thumbnail.jpg",
-    },
-    {
-      title: "Home Interior Trends of 2021",
-      shortDesc:
-        " If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      id: "Home-Interior-Trends-2021",
-      longDesc:
-        "Turning your home upside down to hunker down and outlast the pandemic. Or at least, make it a place where you can live in and operate out of for extended periods (more Zoom, anyone?). If you haven’t already redone your home, here are 6 most popular design choices you’ll want to consider. Click to find out more.",
-      published: true,
-      tags: ["Sixides Insider"],
-      category: "Sixides Insider",
-      publishedDate: 1639929600000,
-      cover: "public/images/8106596390133-Article16-Thumbnail.jpg",
-    }
-  ],
-};
+// const response =
 
 const responsive = {
   superLargeDesktop: {
@@ -69,7 +28,6 @@ const responsive = {
     items: 1,
   },
 };
-
 export default function LatestArticles() {
   const history = useRouter();
   const [articlesList, setArticleList] = useState([]);
@@ -80,14 +38,14 @@ export default function LatestArticles() {
 
   const getArticles = useCallback(async () => {
     try {
-      // const response = await ArticleService.getArticles({ page: 0, size: 100 })
+      const response = await ArticleService.getArticles({ page: 0, size: 100 });
       // const response = await axios.post(
       //   "https://sixides.com/adminservice/public/articles/getAll",
       //   { page: 0, size: 10 }
       // );
-      // if (response.status === 200) {
-      setArticleList(response.data);
-      // }
+      if (response.status === 200) {
+        setArticleList(response.data['Articles']);
+      }
     } catch (err) {
       console.log(err);
     }

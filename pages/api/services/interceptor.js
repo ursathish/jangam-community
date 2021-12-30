@@ -8,7 +8,7 @@ import config from "../../../environment";
 // console.log(process.env.SERVICE_URL);
 
 const axios = Axios.create({
-  baseURL: config.SERVICE_URL,
+ 
 });
 
 axios.interceptors.request.use(
