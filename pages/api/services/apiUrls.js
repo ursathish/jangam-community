@@ -1,0 +1,22 @@
+export default {
+  LOGIN: "admin/login",
+  LOGOUT: "",
+  ARTICLE_GET_ALL: "public/articles/getAll",
+  ARTICLE_GET: "public/articles/get",
+  ARTICLE_CATEGORY_GET_ALL: "public/articles/category/getAll",
+  ARTICLE_SUB_CATEGORY_GET_ALL: "public/articles/subcategory/getAll",
+  MEDIA_GET_ALL: "public/medias/getAll",
+  MEDIA_GET: "public/medias/get",
+  MEDIA_CATEGORY_GET_ALL: "public/medias/category/getAll",
+  MEDIA_SUB_CATEGORY_GET_ALL: "public/medias/subcategory/getAll",
+  BANNER_GET_ALL:'public/banner/getAll',
+  CONTACT_US_ADD:'contactus/query/add',
+  STORIES_SUB_MENU_GET_ALL:'public/storymenus/getAll',
+  STORIES_LIST:'public/medias/featured',
+  ARTICLES_FEATURED:'public/articles/featured',
+  STORIES_SUB_MENU_GET_ALL:'public/storymenus/getAll',
+  SUBSCRIBE:'public/sixides/subscribe',
+  STORIES_TOP3:'public/medias/top3',
+  STORIES_FEATURED:"public/articles/storiesFeatured",
+  MAIN_FEATURED:"public/articles/mainFeatured"
+};

@@ -1,0 +1,65 @@
+@font-face {
+  font-family: WorkSans-Black;
+  src: url("./fonts/WorkSans-Black.ttf") format("trueType");
+}
+@font-face {
+  font-family: WorkSans-BlackItalic;
+  src: url("./fonts/WorkSans-BlackItalic.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-Bold;
+  src: url("./fonts/WorkSans-Bold.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-BoldItalic;
+  src: url("./fonts/WorkSans-BoldItalic.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-SemiBold;
+  src: url("./fonts/WorkSans-SemiBold.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-SemiBoldItalic;
+  src: url("./fonts/WorkSans-SemiBoldItalic.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-Regular;
+  src: url("./fonts/WorkSans-Regular.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-Light;
+  src: url("./fonts/WorkSans-Light.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-Light;
+  src: url("./fonts/WorkSans-Light.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: WorkSans-Medium;
+  src: url("./fonts/WorkSans-Medium.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: Helvetica-Regular;
+  src: url("./fonts/Helvetica.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url("./fonts/Helvetica-Bold.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: HelveticaNeue-Regular;
+  src: url("./fonts/HelveticaNeue-Regular.ttf") format("trueType");
+}
+
+
