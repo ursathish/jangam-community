@@ -3,20 +3,20 @@ import StaticArticleCard from "../static-article-card";
 const dataSource = [
   {
     shortDesc:
-      "Explore verified interior designers and vendors for your home. Learn more and get inspirations from our platform!",
-    titleImagePath: "/images/Icon_1-01.jpg",
+      "ஜங்கம் உறவுகள் அனைவருக்கும் ஆங்கிலப் புத்தாண்டு வாழ்த்துக்கள்",
+    titleImagePath: "/images/Icon_1-01.jpeg",
     title: "",
   },
   {
     shortDesc:
-      "Like what you see? Let us match you with interior designers based on your renovation needs!",
-    titleImagePath: "/images/Icon_2-01.jpg",
+      "ஜங்கம் கல்வி சேவை மையம் -ஆத்தூர்",
+    titleImagePath: "/images/Icon_2-01.jpeg",
     title: "",
   },
   {
     shortDesc:
-      "Track your renovation progress together with your designer through us! Receive scheduled updates and even special promotions!",
-    titleImagePath: "/images/Icon_3-01.jpg",
+      "காலண்டர் வெளியிட்டு விழா",
+    titleImagePath: "/images/Icon_3-01.jpeg",
     title: "",
   },
 ];

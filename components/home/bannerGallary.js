@@ -6,7 +6,7 @@ import HomeService from "../../pages/api/services/home.service";
 export default function BannerGallery() {
   const [bannerList, setBannerList] = useState([
     // {name:'',imageUrl:'/images/1.jpeg'},
-    {name:'',imageUrl:'/images/3.jpeg'},
+    //{name:'',imageUrl:'/images/3.jpeg'},
     {name:'',imageUrl:'/images/5.jpeg'},
     {name:'',imageUrl:'/images/2.jpeg'},
     {name:'',imageUrl:'/images/4.jpeg'},

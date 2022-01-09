@@ -16,10 +16,10 @@ export default function Register() {
         layout="vertical"
         className="register-form"
       >
-        <Form.Item label="zÈÿ>FkD" name="firstName">
+        <Form.Item label="குல தெய்வம்" name="firstName">
           <Input />
         </Form.Item>
-        <Form.Item label="Last Name" name="lastName">
+        <Form.Item label="குலப்பெயர்" name="lastName">
           <Input />
         </Form.Item>
 
